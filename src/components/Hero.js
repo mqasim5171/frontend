@@ -1,28 +1,21 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "./Hero.css";
+import { Link } from "react-router-dom";
+import "./Hero.css"; // Make sure you have styling defined in Hero.css
 
 const Hero = () => {
   return (
-    <div className="hero-container">
-      {/* Right Side - Text Section */}
-      <motion.div
-        className="text-section"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="hero-text">Get all the books you need!</h1>
-        <p className="hero-subtext">Discover your next great read today.</p>
-        <motion.button
-          className="explore-btn"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
+    <section className="hero-section">
+      <div className="hero-content">
+        <h1 className="hero-heading">Get All the Books You Need</h1>
+        <p className="hero-subtext">
+          Discover our amazing collection of books and find your next favorite read.
+        </p>
+        {/* Use Link to navigate to the shop page */}
+        <Link to="/shop" className="explore-btn">
           Explore Now
-        </motion.button>
-      </motion.div>
-    </div>
+        </Link>
+      </div>
+    </section>
   );
 };
 

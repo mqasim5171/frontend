@@ -1,43 +1,39 @@
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px; /* Adjust the height as needed */
-    position: relative;
-    text-align: center;
-    background: url("../assets/hero-bg.jpeg") center/cover no-repeat; /* ✅ Add background image */
-    color: white;
-  }
-  
-  .text-section {
-    background: rgba(0, 0, 0, 0.6); /* ✅ Add a slight dark overlay for better text visibility */
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .hero-text {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .hero-subtext {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .explore-btn {
-    background-color: #ff5733;
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .explore-btn:hover {
-    background-color: #e63e22;
-  }
-  
+.hero-section {
+  background: url('../assets/hero-bg.jpeg') center/cover no-repeat; /* Example background image */
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5); /* optional overlay for readability */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-heading {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  background-color: #EFB036; /* Primary color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #d39e30; /* Slightly darker on hover */
+}
