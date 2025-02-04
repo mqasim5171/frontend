@@ -29,26 +29,23 @@ const BestSeller = () => {
   const { addToCart } = useContext(CartContext);
   const { addToWishlist } = useContext(WishlistContext);
 
-  // Duplicate the books array for seamless looping
-  const slideshowData = [...bestSellersData, ...bestSellersData];
-
   return (
     <div className="bestseller-container">
-      <h2 className="bestseller-heading">Your Favorites Are Waiting—Explore Our Best Sellers!</h2>
-      <div className="slideshow-wrapper">
-        <div className="slideshow-track">
-          {slideshowData.map((book, index) => (
-            <div key={index} className="bestseller-card">
+      <h2 className="bestseller-heading">Best Sellers</h2>
+      <div className="bestseller-grid">
+        {bestSellersData.map((book) => (
+          <div key={book.id} className="bestseller-card">
+            <div className="image-container">
               <img src={book.image} alt={book.title} className="bestseller-image" />
-              <h3 className="bestseller-title">{book.title}</h3>
-              <p className="bestseller-price">{book.price}</p>
-              <div className="bestseller-buttons">
-                <button className="cart-btn" onClick={() => addToCart(book)}>🛒 Add to Cart</button>
-                <button className="wishlist-btn" onClick={() => addToWishlist(book)}>❤️ Wishlist</button>
+              <div className="overlay">
+                <button className="overlay-btn" onClick={() => addToCart(book)}>Add to Cart</button>
+                <button className="overlay-btn" onClick={() => addToWishlist(book)}>Add to Wishlist</button>
               </div>
             </div>
-          ))}
-        </div>
+            <h3 className="bestseller-title">{book.title}</h3>
+            <p className="bestseller-price">{book.price}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
