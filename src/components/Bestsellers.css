@@ -1,37 +1,52 @@
-.bestseller-container {
-  padding: 20px;
-}
-
-.bestseller-heading {
+/* Container for Best Sellers Section */
+.bestsellers-container {
   text-align: center;
-  margin-bottom: 20px;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
 }
 
-.bestseller-grid {
+/* Main heading styling */
+.bestsellers-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #23486A; /* Dark Teal */
+}
+
+/* Horizontal scrollable container */
+.bestsellers-grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
 }
 
+/* Individual book card styling */
 .bestseller-card {
+  background-color: #3B6790;  /* Deep Blue */
+  color: white;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
   position: relative;
-  width: 200px;
-  text-align: center;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
   overflow: hidden;
+  transition: transform 0.3s;
 }
 
+.bestseller-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Book image styling */
 .bestseller-image {
   width: 100%;
-  display: block;
-  transition: transform 0.3s ease;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
+/* Overlay container */
 .overlay {
   position: absolute;
   top: 0;
@@ -44,28 +59,39 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
+.bestseller-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay buttons */
 .overlay-btn {
-  background-color: #efb036;
+  background-color: #EFB036; /* Golden Yellow */
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   margin: 5px 0;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .overlay-btn:hover {
   background-color: #d39e30;
 }
 
-.image-container:hover .bestseller-image {
-  transform: scale(1.1);
+/* Book title styling */
+.bestseller-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  min-height: 3em;
 }
 
-.image-container:hover .overlay {
-  opacity: 1;
+/* Price styling */
+.bestseller-price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }

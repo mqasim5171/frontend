@@ -30,17 +30,15 @@ const BestSeller = () => {
   const { addToWishlist } = useContext(WishlistContext);
 
   return (
-    <div className="bestseller-container">
-      <h2 className="bestseller-heading">Best Sellers</h2>
-      <div className="bestseller-grid">
+    <div className="bestsellers-container">
+      <h2 className="bestsellers-heading">Your Favorites Are Waiting—Explore Our Best Sellers!</h2>
+      <div className="bestsellers-grid">
         {bestSellersData.map((book) => (
           <div key={book.id} className="bestseller-card">
-            <div className="image-container">
-              <img src={book.image} alt={book.title} className="bestseller-image" />
-              <div className="overlay">
-                <button className="overlay-btn" onClick={() => addToCart(book)}>Add to Cart</button>
-                <button className="overlay-btn" onClick={() => addToWishlist(book)}>Add to Wishlist</button>
-              </div>
+            <img src={book.image} alt={book.title} className="bestseller-image" />
+            <div className="overlay">
+              <button className="overlay-btn" onClick={() => addToCart(book)}>Add to Cart</button>
+              <button className="overlay-btn" onClick={() => addToWishlist(book)}>Add to Wishlist</button>
             </div>
             <h3 className="bestseller-title">{book.title}</h3>
             <p className="bestseller-price">{book.price}</p>
