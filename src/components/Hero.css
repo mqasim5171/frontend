@@ -1,0 +1,43 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Adjust the height as needed */
+    position: relative;
+    text-align: center;
+    background: url("../assets/hero-bg.jpeg") center/cover no-repeat; /* ✅ Add background image */
+    color: white;
+  }
+  
+  .text-section {
+    background: rgba(0, 0, 0, 0.6); /* ✅ Add a slight dark overlay for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero-text {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtext {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .explore-btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: #e63e22;
+  }
+  

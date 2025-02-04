@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6347;
+  padding: 15px;
+  color: white;
+}
+
+.navbar input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
